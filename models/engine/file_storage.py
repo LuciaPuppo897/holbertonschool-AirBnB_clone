@@ -27,12 +27,14 @@ class FileStorage:
         for key, value in self.__objects.items(): 
             dict_s[key] = value.to_dict()
         with open(FileStorage.__file_path, 'w', encoding='utf-8') as file:
-            json.dump(dict_s,file())
+            json.dump(dict_s, file, default=lambda o: o.__dict__)
     
     def reload(self):
         """Deserializes the JSON file to __objects if the file exists"""
         if isfile (FileStorage.__file_path):
             with open(FileStorage.__file_path, 'r', encoding='utf-8') as file:
-                json.loads(file)
+                data = json.load(file)
+                for key, value in data.items():
+                    class_name, obj_id = key.split('.')
         else:
             pass
