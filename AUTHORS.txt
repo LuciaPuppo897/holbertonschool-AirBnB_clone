@@ -1,0 +1,4 @@
+# This file lists all contributors to the repository.
+
+Agustín Traversa <6758@holbertonstudents.com>
+Lucia Puppo <6774@holbertonstudents.com>
