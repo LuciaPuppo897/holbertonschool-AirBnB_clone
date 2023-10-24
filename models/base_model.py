@@ -7,6 +7,7 @@ updated_at: datetime - assign with the current datetime when an instance
 is created  and it will be updated every time you change your object.
 """
 import uuid
+from models import storage
 from datetime import datetime
 
 
@@ -32,6 +33,7 @@ class BaseModel:
     def save(self):
         """Update the attribute updated_at to the current time"""
         self.updated_at = datetime.now()
+        storage.save()
 
     def to_dict(self):
         """Returns a dictionary containing all keys of __dict__"""
