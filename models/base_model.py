@@ -15,11 +15,12 @@ class BaseModel:
     """Defines all common attributes/methods for other classes"""
     def __init__(self, *args, **kwargs):
         """Initializes the class"""
-        if len(kwargs) > 0:
+        if kwargs:
             for key, value in kwargs.items():
                 if key != '__class__':
                     if key in ['created_at', 'updated_at']:
-                        setattr(self, key, datetime.strptime(value, "%Y-%m-%dT%H:%M:%S.%f"))
+                        setattr(self, key, datetime.strptime(
+                                value, "%Y-%m-%dT%H:%M:%S.%f"))
                     else:
                         setattr(self, key, value)
         else:
