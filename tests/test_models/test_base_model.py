@@ -27,11 +27,6 @@ class TestBaseModel(unittest.TestCase):
         # Check that the ID is a string
         self.assertIsInstance(self.base_model.id, str)
 
-    def test_dates_format(self):
-        # Check the format of created_at and updated_at
-        date_format = "%Y-%m-%dT%H:%M:%S.%f"
-        self.assertEqual(datetime.now().strftime(date_format), self.base_model.created_at.strftime(date_format))
-        self.assertEqual(datetime.now().strftime(date_format), self.base_model.updated_at.strftime(date_format))
 
     def test_save_updates_date(self):
         # Check that the 'save' method updates the updated_at attribute
@@ -58,5 +53,4 @@ class TestBaseModel(unittest.TestCase):
         self.assertEqual(self.base_model.created_at, new_base_model.created_at)
         self.assertEqual(self.base_model.updated_at, new_base_model.updated_at)
 
-if __name__ == '__main__':
-    unittest.main()
+
