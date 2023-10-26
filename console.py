@@ -16,7 +16,8 @@ class HBNBCommand(cmd.Cmd):
 
     prompt = '(hbnb) '
 
-    dicm = [BaseModel, FileStorage, Amenity, Place, Review, State, User]
+    dicm = ['BaseModel', 'FileStorage', 'Amenity'
+            'Place', 'Review', 'State', 'User']
 
     def do_EOF(self, arg):
         """Exit the interpreter"""
@@ -33,14 +34,13 @@ class HBNBCommand(cmd.Cmd):
     def do_create(self, *args):
         """Creates a new instance of BaseModel, saves
         it (to the JSON file) and prints the id."""
-        
         arg = args.split()
         if arg not in dic:
             print("** class name missing **")
         if arg[0] not in FileStorage:
             print("** class doesn't exist **")
         obj.save()
-        json.dump(dict_s, file)    
+        json.dump(dict_s, file)
         print(obj.id)
 
     def do_show(self, args):
@@ -68,7 +68,7 @@ class HBNBCommand(cmd.Cmd):
             print("** instance id missing **")
         if arg[0] not in dic and arg[1] == id:
             print("** no instance found **")
-        del(obj)
+        del (obj)
 
     def do_all(self, *args):
         """Prints all string representation of all instances
@@ -78,7 +78,8 @@ class HBNBCommand(cmd.Cmd):
             print("** class name missing **")
         if arg[0] not in FileStorage:
             print("** class doesn't exist **")
-
+        if args == dicm:
+            print(obj)
 
     def do_update(self, *args):
         """Updates an instance based on the class name and id by adding
@@ -96,7 +97,6 @@ class HBNBCommand(cmd.Cmd):
             print("** attribute name missing **")
         if arg[3] not in HBNBCommand:
             print("** value missing **")
-
 
 
 if __name__ == '__main__':
