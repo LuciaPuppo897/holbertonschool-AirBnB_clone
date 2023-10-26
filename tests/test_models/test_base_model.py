@@ -1,12 +1,8 @@
-##!/usr/bin/python3
-""" Unit tests for BaseModel class"""
-
 import unittest
 from models.base_model import BaseModel
 from datetime import datetime
 import json
 import os
-
 
 class TestBaseModel(unittest.TestCase):
     def setUp(self):
@@ -19,23 +15,22 @@ class TestBaseModel(unittest.TestCase):
             pass
 
     def test_unique_ids(self):
-        # Check that generated IDs are unique
+        # Verify that generated IDs are unique in different instances of BaseModel.
         other_base_model = BaseModel()
         self.assertNotEqual(self.base_model.id, other_base_model.id)
 
     def test_id_type(self):
-        # Check that the ID is a string
+        # Verify that the ID is a string (str).
         self.assertIsInstance(self.base_model.id, str)
 
-
     def test_save_updates_date(self):
-        # Check that the 'save' method updates the updated_at attribute
+        # Verify that the 'save' method updates the 'updated_at' date.
         original_updated_at = self.base_model.updated_at
         self.base_model.save()
         self.assertNotEqual(original_updated_at, self.base_model.updated_at)
 
     def test_to_dict(self):
-        # Check the correctness of the 'to_dict' method
+        # Verify the correctness of the 'to_dict' method.
         base_model_dict = self.base_model.to_dict()
         self.assertEqual(base_model_dict["__class__"], "BaseModel")
         self.assertIsInstance(base_model_dict["created_at"], str)
@@ -44,7 +39,7 @@ class TestBaseModel(unittest.TestCase):
         self.assertEqual(base_model_dict["updated_at"], self.base_model.updated_at.isoformat())
 
     def test_json_serialization(self):
-        # Check if object can be converted to JSON and back
+        # Verify that an object can be converted to JSON and back to an object.
         base_model_dict = self.base_model.to_dict()
         base_model_json = json.dumps(base_model_dict)
         new_base_model_dict = json.loads(base_model_json)
@@ -53,4 +48,17 @@ class TestBaseModel(unittest.TestCase):
         self.assertEqual(self.base_model.created_at, new_base_model.created_at)
         self.assertEqual(self.base_model.updated_at, new_base_model.updated_at)
 
+    def test_instance_creation_with_arguments(self):
+        data = {
+            'id': 'test_id',
+            'created_at': '2023-10-26T12:00:00.000000',
+            'updated_at': '2023-10-26T13:00:00.000000',
+            'custom_attribute': 'custom_value'
+        }
+        obj = BaseModel(**data)
+        self.assertEqual(obj.id, 'test_id')
+        self.assertEqual(obj.created_at.isoformat(), '2023-10-26T12:00:00')
+        self.assertEqual(obj.updated_at.isoformat(), '2023-10-26T13:00:00')
 
+if __name__ == '__main__':
+    unittest.main()
