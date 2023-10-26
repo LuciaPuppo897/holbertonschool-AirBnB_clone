@@ -4,14 +4,6 @@ a class FileStorage that storage all of commands,date,classes etc
 """
 
 import json
-from os.path import isfile
-from models.user import User
-from models.city import City
-from models.state import State
-from models.place import Place
-from models.amenity import Amenity
-from models.base_model import BaseModel
-from models.review import Review
 
 
 class FileStorage:
@@ -38,18 +30,34 @@ class FileStorage:
         dict_s = {}
         for key, value in self.__objects.items():
             dict_s[key] = value.to_dict()
-        with open(FileStorage.__file_path, 'w', encoding='utf-8') as file:
-            json.dump(dict_s, file, default=lambda o: o.__dict__)
+        with open(FileStorage.__file_path, 'w') as file:
+            json.dump(dict_s,file, indent=4)
+        print(dict_s)
+        print(self.__objects)
 
     def reload(self):
         """Deserializes the JSON file to __objects if the file exists"""
-        if isfile(FileStorage.__file_path):
-            with open(FileStorage.__file_path, 'r', encoding='utf-8') as file:
-                data = json.load(file)
-            for key, value in data.items():
-                class_name = value["__class__"]
-                if class_name in globals():
-                    class_obj = globals()[class_name](**value)
-                    FileStorage.__objects[key] = class_obj
-        else:
+        try:
+            with open(self.__file_path, 'r') as file:
+                loaded_data = json.load(file)
+                from models.user import User
+                from models.city import City
+                from models.state import State
+                from models.place import Place
+                from models.amenity import Amenity
+                from models.review import Review
+                from models.base_model import BaseModel
+                
+                dict_classs = {
+                    "User" : User,
+                    "City" : City,
+                    "State" : State,
+                    "Place" : Place,
+                    "Amenity" : Amenity,
+                    "Review" : Review,
+                    "BaseModel" : BaseModel
+                }
+                for key, obj in loaded_data.items():
+                    dict_classs[key] = dict_classs[obj["__class__"]](**obj)
+        except FileNotFoundError:
             pass
