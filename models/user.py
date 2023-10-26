@@ -7,8 +7,6 @@
     first_name: string - empty string
     last_name: string - empty string
     """
-
-
 from models.base_model import BaseModel
 
 
