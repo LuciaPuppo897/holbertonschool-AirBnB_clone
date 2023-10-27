@@ -12,7 +12,8 @@ from models.user import User
 from models.amenity import Amenity
 
 
-valid_classes = {'BaseModel', 'FileStorage', 'City', 'Place', 'Review', 'State', 'User', 'Amenity'}
+valid_classes = {'BaseModel', 'FileStorage', 'City',
+                 'Place', 'Review', 'State', 'User', 'Amenity'}
 
 
 class HBNBCommand(cmd.Cmd):
@@ -102,7 +103,7 @@ class HBNBCommand(cmd.Cmd):
         """
         args = arg.split()
         if len(args) == 0:
-            instances = storage.all().values()
+            instances = storage.all()
         else:
             cls_n = args[0]
             if cls_n not in valid_classes:
