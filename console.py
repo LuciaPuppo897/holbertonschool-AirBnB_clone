@@ -114,8 +114,8 @@ class HBNBCommand(cmd.Cmd):
                 print("** class doesn't exist **")
                 return
             if cls_n:
-                class_instances = [v for k, v in instances.items() if cls_n in k]
-                print([str(instances) for instances in class_instances])
+                classinstance = [v for k, v in instances.items() if cls_n in k]
+                print([str(instances) for instances in classinstance])
             else:
                 print(instances)
 
