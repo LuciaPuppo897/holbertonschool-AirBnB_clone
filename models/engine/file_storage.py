@@ -55,7 +55,12 @@ class FileStorage:
                     "Review": Review,
                     "BaseModel": BaseModel
                 }
-                for key, obj in loaded_data.items():
-                    dict_classs[key] = dict_classs[obj["__class__"]](**obj)
+                for key, value in loaded_data.items():
+                    if '__class__' in value:
+                        class_name = value['__class__']
+                    if class_name in dict_classs:
+                        cls = dict_classs[class_name]
+                        instance = cls(**value)
+                        self.__objects[key] = instance
         except FileNotFoundError:
             pass
