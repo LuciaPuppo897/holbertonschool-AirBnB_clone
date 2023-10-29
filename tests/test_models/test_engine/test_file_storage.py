@@ -20,10 +20,7 @@ class TestFileStorage(unittest.TestCase):
         self.user = User()
 
     def tearDown(self):
-        try:
-            os.remove(self.storage._FileStorage__file_path)
-        except:
-            pass
+        pass
 
     def test_all(self):
         """
@@ -53,6 +50,10 @@ class TestFileStorage(unittest.TestCase):
         key = "{}.{}".format(self.user.__class__.__name__, self.user.id)
         all_objects = new_storage.all()
         self.assertIn(key, all_objects)
+
+    def test_doc(self):
+        self.assertIsNotNone(FileStorage.__doc__)
+
 
 if __name__ == '__main__':
     unittest.main()
