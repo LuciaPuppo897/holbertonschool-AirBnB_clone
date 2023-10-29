@@ -102,18 +102,22 @@ class HBNBCommand(cmd.Cmd):
         name is given
         """
         args = arg.split()
+        instances = storage.all()
         if len(args) == 0:
-            instances = storage.all()
+            instance_list = []
+            for k, v in instances:
+                instance_list.append(str(v))
+            print(instance_list)
         else:
             cls_n = args[0]
             if cls_n not in valid_classes:
                 print("** class doesn't exist **")
                 return
             if cls_n:
-                instances = [v for k, v in storage.all().items() if cls_n in k]
-                print([str(instance) for instance in instances])
+                class_instances = [v for k, v in instances.items() if cls_n in k]
+                print([str(instances) for instances in class_instances])
             else:
-                print(storage.all())
+                print(instances)
 
     def do_update(self, arg):
         """
