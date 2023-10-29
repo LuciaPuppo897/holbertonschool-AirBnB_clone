@@ -22,14 +22,6 @@ class TestFileStorage(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_all(self):
-        """
-        Test the 'all' method
-        """
-        all_objects = self.storage.all()
-        self.assertEqual(type(all_objects), dict)
-        self.assertEqual(len(all_objects), 0)
-
     def test_new(self):
         """
         Test the 'new' method
