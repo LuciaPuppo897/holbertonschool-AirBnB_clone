@@ -5,8 +5,5 @@ from models.base_model import BaseModel
 
 
 class State(BaseModel):
-    """class state"""
-    def __init__(self, *args, **kwargs):
-        """Initializes the state class"""
-        super().__init__(*args, **kwargs)
-        self.name = ""
+    """class State"""
+    name = ""
