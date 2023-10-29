@@ -37,7 +37,7 @@ class TestAmenity(unittest.TestCase):
         obj = Amenity()
         obj.id = "345"
         obj_str = obj.__str__()
-        self.assertIn("[Amenity] (234)", obj_str)
+        self.assertIn("[Amenity] (345)", obj_str)
 
     def test_receive_nothing(self):
         self.assertEqual(Amenity, type(Amenity()))
