@@ -105,7 +105,7 @@ class HBNBCommand(cmd.Cmd):
         instances = storage.all()
         if len(args) == 0:
             instance_list = []
-            for k, v in instances:
+            for k, v in instances.items():
                 instance_list.append(str(v))
             print(instance_list)
         else:
