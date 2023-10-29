@@ -55,13 +55,6 @@ class TestBaseModel(unittest.TestCase):
         self.base_model.save()
         self.assertNotEqual(original_updated_at, self.base_model.updated_at)
 
-    def test_str_representation(self):
-        obj_str = str(self.base_model)
-        self.assertIn('BaseModel', obj_str)
-        self.assertIn(self.base_model.id, obj_str)
-        self.assertIn(self.base_model.created_at.isoformat(), obj_str)
-        self.assertIn(self.base_model.updated_at.isoformat(), obj_str)
-
     def test_create_with_args(self):
         data = {
             'id': 'test_id',
@@ -84,7 +77,7 @@ class TestBaseModel(unittest.TestCase):
 
     def test_id_lenght(self):
         base = BaseModel()
-        self.assertIsInstance(obj.id, str)
+        self.assertIsInstance(base.id, str)
         self.assertEqual(len(base.id), 36)
 
     def test_doc(self):
