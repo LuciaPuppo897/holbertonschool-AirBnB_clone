@@ -1,15 +1,20 @@
 <div align="center">
+
+![AirBnB_Clone](https://github.com/Nitsu47/holbertonschool-AirBnB_clone/assets/135637506/5a5595cc-8f00-4613-9834-78b2b19f4015)
+
+</div>
+
+<div align="center">
   
 <h1> AirBnB clone - The console </h1>
 
-> This repository contains the "AirBnB clone - The console" project for Holberton School.
+This repository contains the "AirBnB clone - The console" project for Holberton School.
 
 </div>
 
 <div align="center">
 
-![sea-horse](https://user-images.githubusercontent.com/110431271/229328604-b8c19c26-54e9-48d6-946f-91b0337deece.png) ════════════════════ ![sea-horse](https://user-images.githubusercontent.com/110431271/229328604-b8c19c26-54e9-48d6-946f-91b0337deece.png) ════════════════════ ![sea-horse](https://user-images.githubusercontent.com/110431271/229328604-b8c19c26-54e9-48d6-946f-91b0337deece.png)
-
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 </div>
 
 <br>
@@ -123,47 +128,51 @@ All tests should also pass in non-interactive mode: $ echo "python3 -m unittest 
 <summary><h2>Files</h2></summary>
         
 ## Files
-|Files|
+|Out Folders|
 |---|
-|[console.py](#console.py)|
-<h3>In "models" folder:<h3>
-|[amenity.py](#amenity.py)|
-|[base_model.py](#base_model.py)|
-|[city.py](#city.py)|
-|[place.py](#place.py)|
-|[review.py](#review.py)|
-|[state.py](#state.py)|
-|[user.py](#user.py)|
-<h3>In "engine" folder inside "models"<h3>
-|[file_storage.py](#file_storage.py)|
+|[console.py](#console.py): The command-line interpreter for interacting with the AirBnB clone project. It allows users to manage and interact with the project's data and models through a command-line interface|
+|[models](#models): contains all the basic models|
+|[tests](#tests): Contains tests for the console and models|
 
+|In "models" folder:|
+|---|
+|[engine](#engine): Contains essential modules for data storage and retrieval, including 'file_storage.py'|
+|[amenity.py](#amenity.py): Amenity model, which represents the services or amenities available in a rental property. It includes attributes for features such as a pool, Wi-Fi access, and parking facilities.|
+|[base_model.py](#base_model.py): Provides common attributes and methods that are inherited by other models, facilitating data management|
+|[city.py](#city.py): City model in which we can establish the city in where the rental property is. ex: New York|
+|[place.py](#place.py): Place model in which we can establish the city in where the rental property is. ex: EE.UU|
+|[review.py](#review.py): Review model to stablish the reviews sections of a publication|
+|[state.py](#state.py): State model to establish the State in where the rental property is. ex: Florida|
+|[user.py](#user.py): User model to establish a User for the Publicator or the possible Buyer|
+
+|In "engine" folder inside "models"|
+|---|
+|[file_storage.py](#file_storage.py): Responsible for storing and retrieving data|
+
+<a name="models"></a>
+<h3><a href="https://github.com/Nitsu47/holbertonschool-AirBnB_clone/tree/master/models"></a></h3>
+<a name="tests"></a>
+<h3><a href="https://github.com/Nitsu47/holbertonschool-AirBnB_clone/tree/master/models/engine"></a></h3>
 <a name="console.py"></a>
-<h3><a href="https://github.com/Nitsu47/holbertonschool-AirBnB_clone/blob/master/console.py">console.py</a></h3>
-The command interpreter 
+<h3><a href="https://github.com/Nitsu47/holbertonschool-AirBnB_clone/blob/master/console.py"></a></h3>
+<a name="engine"></a>
+<h3><a href="https://github.com/Nitsu47/holbertonschool-AirBnB_clone/tree/master/models/engine"></a></h3>
 <a name="amenity.py"></a>
-<h3><a href="https://github.com/Nitsu47/holbertonschool-AirBnB_clone/blob/master/models/amenity.py">amenity.py</a></h3>
-.
+<h3><a href="https://github.com/Nitsu47/holbertonschool-AirBnB_clone/blob/master/models/amenity.py"></a></h3>
 <a name="base_model.py"></a>
-<h3><a href="https://github.com/Nitsu47/holbertonschool-AirBnB_clone/blob/master/models/base_model.py">base_model.py</a></h3>
-.
+<h3><a href="https://github.com/Nitsu47/holbertonschool-AirBnB_clone/blob/master/models/base_model.py"></a></h3>
 <a name="city.py"></a>
-<h3><a href="https://github.com/Nitsu47/holbertonschool-AirBnB_clone/blob/master/models/city.py">city.py</a></h3>
-.
+<h3><a href="https://github.com/Nitsu47/holbertonschool-AirBnB_clone/blob/master/models/city.py"></a></h3>
 <a name="place.py"></a>
-<h3><a href="https://github.com/Nitsu47/holbertonschool-AirBnB_clone/blob/master/models/place.py">place.py</a></h3>
-.
+<h3><a href="https://github.com/Nitsu47/holbertonschool-AirBnB_clone/blob/master/models/place.py"></a></h3>
 <a name="review.py"></a>
-<h3><a href="https://github.com/Nitsu47/holbertonschool-AirBnB_clone/blob/master/models/review.py">review.py</a></h3>
-.
+<h3><a href="https://github.com/Nitsu47/holbertonschool-AirBnB_clone/blob/master/models/review.py"></a></h3>
 <a name="state.py"></a>
-<h3><a href="https://github.com/Nitsu47/holbertonschool-AirBnB_clone/blob/master/models/state.py">state.py</a></h3>
-.
+<h3><a href="https://github.com/Nitsu47/holbertonschool-AirBnB_clone/blob/master/models/state.py"></a></h3>
 <a name="user.py"></a>
-<h3><a href="https://github.com/Nitsu47/holbertonschool-AirBnB_clone/blob/master/models/user.py">user.py</a></h3>
-.
+<h3><a href="https://github.com/Nitsu47/holbertonschool-AirBnB_clone/blob/master/models/user.py"></a></h3>
 <a name="file_storage.py"></a>
-<h3><a href="https://github.com/Nitsu47/holbertonschool-AirBnB_clone/blob/master/models/engine/file_storage.py">file_storage.py</a></h3>
-.
+<h3><a href="https://github.com/Nitsu47/holbertonschool-AirBnB_clone/blob/master/models/engine/file_storage.py"></a></h3>
 
 </details>
 
@@ -179,10 +188,10 @@ Placeholder
 
 <br>
 
-![sea-horse](https://user-images.githubusercontent.com/110431271/229328604-b8c19c26-54e9-48d6-946f-91b0337deece.png) ════════════════════ ![sea-horse](https://user-images.githubusercontent.com/110431271/229328604-b8c19c26-54e9-48d6-946f-91b0337deece.png) ════════════════════ ![sea-horse](https://user-images.githubusercontent.com/110431271/229328604-b8c19c26-54e9-48d6-946f-91b0337deece.png)
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 
 <br>
 
-Last updated: Oct 25, 2023
+Last updated: Oct 29, 2023
 
 </div>
