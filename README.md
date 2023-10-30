@@ -27,7 +27,9 @@ This repository contains the "AirBnB clone - The console" project for Holberton 
 * [Usage](#usage)
 * [Authors](#authors)
 
-## About
+<details>
+<summary><h2>About</h2></summary>
+
 The project its part of a greater project about construct our own AirBnB Clone to learn a get deeper into Python lenguage. In this repository, you can find a basic console for the web in where we do:
 * The Console
 * Web Static
@@ -37,97 +39,86 @@ The project its part of a greater project about construct our own AirBnB Clone t
 * Web dynamic
 This objective is given us by Holberton School as a pair programming project of the second trimester.
 
-## Resources
-<h2>Concepts<h2>
+</details>
+
+<details>
+<summary><h2>Resources</h2></summary>
+
+<h3>Concepts</h3>
+  
 * <a href="https://intranet.hbtn.io/concepts/66" target="blank">Python packages</a>
+
 * <a href="https://intranet.hbtn.io/concepts/74" target="blank">AirBnB clone</a>
-<h2>Videos<h2>
+
+<h3>Videos</h3>
+  
 * <a href="https://www.youtube.com/watch?v=QTwmCB_AWqI" target="blank">Overview</a>
+
 * <a href="https://www.youtube.com/watch?v=jeJwRB33YNg" target="blank">The Console</a>
+
 * <a href="https://www.youtube.com/watch?v=ZwCD8cNZk9U" target="blank">ORM</a>
+
 * <a href="https://www.youtube.com/watch?v=LrQhULlFJdU" target="blank">RESTful API</a>
-<h2>HBNB Playlist<h2>
+
+<h3>HBNB Playlist</h3>
+  
 * <a href="https://www.youtube.com/playlist?list=PLlLHfkTcnvmPOp6jv_89tRpJUMFrP-Wbi" target="blank">HBNB videos</a>
-<h2>Concepts to learn<h2>
+
+<h3>Concepts to learn</h3>
+  
 * <a href="https://docs.python.org/3.4/library/unittest.html#module-unittest" target="blank">Unittest</a>
+
 * Python packages concept page
+
 * Serialization/Deserialization
+
 * `*args, **kwargs`
+
 * `datetime`
 
-## Requirements
-<h2>Python Scripts<h2>
-*Allowed editors: vi, vim, emacs
-*All your files will be interpreted/compiled on Ubuntu 20.04 LTS using python3 (version 3.8.5)
-*All your files should end with a new line
-*The first line of all your files should be exactly #!/usr/bin/python3
-*A README.md file, at the root of the folder of the project, is mandatory
-*Your code should use the pycodestyle (version 2.7.*)
-*All your files must be executable
-*The length of your files will be tested using wc
-*All your modules should have a documentation (python3 -c 'print(__import__("my_module").__doc__)')
-*All your classes should have a documentation (python3 -c 'print(__import__("my_module").MyClass.__doc__)')
-*All your functions (inside and outside a class) should have a documentation (python3 -c 'print(__import__("my_module").my_function.__doc__)' and python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)')
-*A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, class or method (the length of it will be verified)
+</details>
 
-<h2>Python Unit Tests<h2>
-*Allowed editors: vi, vim, emacs
-*All your files should end with a new line
-*All your test files should be inside a folder tests
-*You have to use the unittest module
-*All your test files should be python files (extension: .py)
-*All your test files and folders should start by test_
-*Your file organization in the tests folder should be the same as your project
+<details>
+<summary><h2>Requirements</h2></summary>
+
+<h2>Python Scripts</h2>
+
+* Allowed editors: vi, vim, emacs
+* All your files will be interpreted/compiled on Ubuntu 20.04 LTS using python3 (version 3.8.5)
+* All your files should end with a new line
+* The first line of all your files should be exactly #!/usr/bin/python3
+* A README.md file, at the root of the folder of the project, is mandatory
+* Your code should use the pycodestyle (version 2.7.*)
+* All your files must be executable
+* The length of your files will be tested using wc
+* All your modules should have a documentation (python3 -c 'print(__import__("my_module").__doc__)')
+* All your classes should have a documentation (python3 -c 'print(__import__("my_module").MyClass.__doc__)')
+* All your functions (inside and outside a class) should have a documentation (python3 -c 'print(__import__("my_module").my_function.__doc__)' and python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)')
+* A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, class or method (the length of it will be verified)
+
+<h2>Python Unit Tests</h2>
+
+* Allowed editors: vi, vim, emacs
+* All your files should end with a new line
+* All your test files should be inside a folder tests
+* You have to use the unittest module
+* All your test files should be python files (extension: .py)
+* All your test files and folders should start by test_
+* Your file organization in the tests folder should be the same as your project
 e.g., For models/base_model.py, unit tests must be in: tests/test_models/test_base_model.py
 e.g., For models/user.py, unit tests must be in: tests/test_models/test_user.py
-*All your tests should be executed by using this command: python3 -m unittest discover tests
-*You can also test file by file by using this command: python3 -m unittest tests/test_models/test_base_model.py
-*All your modules should have a documentation (python3 -c 'print(__import__("my_module").__doc__)')
-*All your classes should have a documentation (python3 -c 'print(__import__("my_module").MyClass.__doc__)')
-*All your functions (inside and outside a class) should have a documentation (python3 -c 'print(__import__("my_module").my_function.__doc__)' and python3 -c 'print(__import__("my_module").*MyClass.my_function.__doc__)')
-*We strongly encourage you to work together on test cases, so that you don’t miss any edge case
+* All your tests should be executed by using this command: python3 -m unittest discover tests
+* You can also test file by file by using this command: python3 -m unittest tests/test_models/test_base_model.py
+* All your modules should have a documentation (python3 -c 'print(__import__("my_module").__doc__)')
+* All your classes should have a documentation (python3 -c 'print(__import__("my_module").MyClass.__doc__)')
+* All your functions (inside and outside a class) should have a documentation (python3 -c 'print(__import__("my_module").my_function.__doc__)' and python3 -c 'print(__import__("my_module").*MyClass.my_function.__doc__)')
+* We strongly encourage you to work together on test cases, so that you don’t miss any edge case
 
-Execution
-Your shell should work like this in interactive mode:
-
-$ ./console.py
-(hbnb) help
-
-Documented commands (type help <topic>):
-========================================
-EOF  help  quit
-
-(hbnb) 
-(hbnb) 
-(hbnb) quit
-$
-But also in non-interactive mode: (like the Shell project in C)
-
-$ echo "help" | ./console.py
-(hbnb)
-
-Documented commands (type help <topic>):
-========================================
-EOF  help  quit
-(hbnb) 
-$
-$ cat test_help
-help
-$
-$ cat test_help | ./console.py
-(hbnb)
-
-Documented commands (type help <topic>):
-========================================
-EOF  help  quit
-(hbnb) 
-$
-All tests should also pass in non-interactive mode: $ echo "python3 -m unittest discover tests" | bash
+</details>
 
 <details>
 <summary><h2>Files</h2></summary>
         
-## Files
 |Out Folders|
 |---|
 |[console.py](#console.py): The command-line interpreter for interacting with the AirBnB clone project. It allows users to manage and interact with the project's data and models through a command-line interface|
@@ -150,34 +141,66 @@ All tests should also pass in non-interactive mode: $ echo "python3 -m unittest 
 |[file_storage.py](#file_storage.py): Responsible for storing and retrieving data|
 
 <a name="models"></a>
-<h3><a href="https://github.com/Nitsu47/holbertonschool-AirBnB_clone/tree/master/models"></a></h3>
+<a href="https://github.com/Nitsu47/holbertonschool-AirBnB_clone/tree/master/models"></a>
 <a name="tests"></a>
-<h3><a href="https://github.com/Nitsu47/holbertonschool-AirBnB_clone/tree/master/models/engine"></a></h3>
+<a href="https://github.com/Nitsu47/holbertonschool-AirBnB_clone/tree/master/models/engine"></a>
 <a name="console.py"></a>
-<h3><a href="https://github.com/Nitsu47/holbertonschool-AirBnB_clone/blob/master/console.py"></a></h3>
+<a href="https://github.com/Nitsu47/holbertonschool-AirBnB_clone/blob/master/console.py"></a>
 <a name="engine"></a>
-<h3><a href="https://github.com/Nitsu47/holbertonschool-AirBnB_clone/tree/master/models/engine"></a></h3>
+<a href="https://github.com/Nitsu47/holbertonschool-AirBnB_clone/tree/master/models/engine"></a>
 <a name="amenity.py"></a>
-<h3><a href="https://github.com/Nitsu47/holbertonschool-AirBnB_clone/blob/master/models/amenity.py"></a></h3>
+<a href="https://github.com/Nitsu47/holbertonschool-AirBnB_clone/blob/master/models/amenity.py"></a>
 <a name="base_model.py"></a>
-<h3><a href="https://github.com/Nitsu47/holbertonschool-AirBnB_clone/blob/master/models/base_model.py"></a></h3>
+<a href="https://github.com/Nitsu47/holbertonschool-AirBnB_clone/blob/master/models/base_model.py"></a>
 <a name="city.py"></a>
-<h3><a href="https://github.com/Nitsu47/holbertonschool-AirBnB_clone/blob/master/models/city.py"></a></h3>
+<a href="https://github.com/Nitsu47/holbertonschool-AirBnB_clone/blob/master/models/city.py"></a>
 <a name="place.py"></a>
-<h3><a href="https://github.com/Nitsu47/holbertonschool-AirBnB_clone/blob/master/models/place.py"></a></h3>
+<a href="https://github.com/Nitsu47/holbertonschool-AirBnB_clone/blob/master/models/place.py"></a>
 <a name="review.py"></a>
-<h3><a href="https://github.com/Nitsu47/holbertonschool-AirBnB_clone/blob/master/models/review.py"></a></h3>
+<a href="https://github.com/Nitsu47/holbertonschool-AirBnB_clone/blob/master/models/review.py"></a>
 <a name="state.py"></a>
-<h3><a href="https://github.com/Nitsu47/holbertonschool-AirBnB_clone/blob/master/models/state.py"></a></h3>
+<a href="https://github.com/Nitsu47/holbertonschool-AirBnB_clone/blob/master/models/state.py"></a>
 <a name="user.py"></a>
-<h3><a href="https://github.com/Nitsu47/holbertonschool-AirBnB_clone/blob/master/models/user.py"></a></h3>
+<a href="https://github.com/Nitsu47/holbertonschool-AirBnB_clone/blob/master/models/user.py"></a>
 <a name="file_storage.py"></a>
-<h3><a href="https://github.com/Nitsu47/holbertonschool-AirBnB_clone/blob/master/models/engine/file_storage.py"></a></h3>
+<a href="https://github.com/Nitsu47/holbertonschool-AirBnB_clone/blob/master/models/engine/file_storage.py"></a>
 
 </details>
 
-## Usage
-Placeholder
+<details>
+<summary><h2>Usage</h2></summary>
+
+For the first, if you doesn´t have installed yet 'git', write this command:
+```
+sudo apt-get install git
+```
+For the next, clone this repository with:
+```
+git clone https://github.com/Nitsu47/holbertonschool-AirBnB_clone.git
+```
+Now, to execute the console, put:
+```
+./console.py
+```
+After it you can view the prompt '(hbnb)' and star to put commands!!
+
+<h2>Here you have a list of the aviable commands:</h2>
+
+quit and EOF - these commands exit the console.
+
+help - displays the list of commands to read help. If you use ```help command_name``` it displays the help for the specified command.
+
+create - when you put ```create class_name``` it creates an instance for the specified class and prints it´s id.
+
+destroy - when you put ```destroy class_name instance_id``` it deletes the specified instance based on the class name and instance id.
+
+show - when you put ```show class_name instance_id``` it shows (prints) the string representation of the respective instance based on the class name and instance id.
+
+all - when you put ```all class_name``` it prints the string representation of all instances of the respective specified class.
+
+update - when you put ```update class_name instance_id attribute "value"``` updates an specified attribute based on the class name and instance id
+
+</details>
 
 <div align="center">
 
@@ -192,6 +215,4 @@ Placeholder
 
 <br>
 
-Last updated: Oct 29, 2023
-
-</div>
+Last updated: Oct 30, 2023
